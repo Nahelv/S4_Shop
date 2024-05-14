@@ -12,7 +12,7 @@ const app = createApp(App)
 app.use(createPinia())
 
 const router = new createRouter({
-    history: createWebHistory(),
+    history: createWebHistory('/S4_Shop/'),
     routes: [
         { path: '/', component: Home },
         { path: '/categories', component: () => import('@/views/Categorie.vue') },
