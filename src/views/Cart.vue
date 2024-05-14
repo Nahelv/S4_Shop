@@ -38,10 +38,11 @@ const cartStore = useCartStore();
               <tbody>
               <tr class="border-b border-neutral-200" v-for="product in cartStore.getProducts" :key="product.id">
                 <td class="whitespace-nowrap border-e border-neutral-200 px-6 py-4">
-                  <img :src="product.product.image" class="w-full h-10 object-cover" :alt="product.product.title">
+                  <img :src="product.product.image" class="w-full h-[80px] object-cover" :alt="product.product.title">
                 </td>
                 <td class="whitespace-nowrap border-e border-neutral-200 px-6 py-4">
-                  {{ product.product.title }}
+                  {{ product.product.title }} <br>
+                  <span class="text-neutral-500">{{ product.product.description.substring(0, 55) + "..." }}</span>
                 </td>
                 <td class="whitespace-nowrap border-e border-neutral-200 px-6 py-4">
                   {{ product.product.price.toFixed(2).replace('.', ',') }} €
