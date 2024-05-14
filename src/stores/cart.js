@@ -6,6 +6,7 @@ export const useCartStore = defineStore('cart', () => {
     const products = ref([])
 
     const nbProducts = computed(() => {
+        localStorage.getItem('cart') ? products.value = JSON.parse(localStorage.getItem('cart')) : products.value = []
         return products.value.length
     })
 
