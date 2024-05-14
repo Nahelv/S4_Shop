@@ -37,7 +37,7 @@ const shortDescription = computed(() => {
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">{{ props.title }}</div>
       <p class="text-black text-base">{{ shortDescription }}</p>
-      <h3 class="text-2xl mt-2">{{ props.price }} €</h3>
+      <h3 class="text-2xl mt-2 font-bold green">{{ props.price }} €</h3>
 
       <div class="flex gap-2">
         <router-link
